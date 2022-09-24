@@ -19,6 +19,11 @@ public class HalloJavaMitForEach {
         for (String s : stringList) {
             System.out.println(s);
         }
-    }
 
+        System.out.println("\nZweite Variante:");
+        stringList.forEach((String s) -> System.out.println(s));
+
+        System.out.println("\nDritte Variante:");
+        stringList.forEach(System.out::println);
+    }
 }
