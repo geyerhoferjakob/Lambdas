@@ -16,7 +16,7 @@ public class NumberTester {
         this.fileName = fileName;
     }
 
-    public void settOddEvenTester(NumberTest oddTester){
+    public void setOddEvenTester(NumberTest oddTester){
         this.oddTester = oddTester;
     }
 
@@ -43,6 +43,53 @@ public class NumberTester {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        }
+
+        System.out.println(list.get(0) + " Tests" + "\n");
+        for (int i = 1; i < list.size(); i++) {
+            switch(list.get(i)){
+                case "1":
+                    System.out.println("OddEvenTester");
+                    NumberTest isEven = (n) -> (n%2) == 0;
+                    setOddEvenTester(isEven);
+                    System.out.println();
+                    i++;
+                    break;
+                case "2":
+                    System.out.println("PrimeTester");
+                    NumberTest isPrime = (n) ->
+                    {
+                        if(n<=2){
+                            return false;
+                        }
+                        for (int j = 2; j < n; j++) {
+                            if(n % j == 0){
+                                return false;
+                            }
+                        }
+                        return true;
+                    };
+                    i++;
+                    break;
+                case "3":
+                    System.out.println("PalindromeTester");
+                    NumberTest isPalindrome = (n) -> {
+                        String valueN = Integer.toString(n);
+                        if(valueN.length() < 1){
+                            return true;
+                        }
+                        for (int j = 0; j < valueN.length(); j++) {
+                            if(valueN.charAt(j) == valueN.charAt(valueN.length()-j)) {
+                                continue;
+                            }else{
+                                return false;
+                            }
+                        }
+                        return false;
+                    };
+                    i++;
+                default:return;
+            }
         }
     }
 
