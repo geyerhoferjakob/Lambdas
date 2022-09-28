@@ -1,0 +1,22 @@
+package net.htlgkr.geyerhoferj190242.lambdas;
+
+public class Number {
+    private double a;
+    private double b;
+
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+}

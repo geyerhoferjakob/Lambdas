@@ -17,13 +17,14 @@ public class HalloJavaMitForEach {
     public void showList(){
         System.out.println("Erste Variante:");
         for (String s : stringList) {
-            System.out.println(s);
+            System.out.print(s);
         }
 
         System.out.println("\nZweite Variante:");
-        stringList.forEach((String s) -> System.out.println(s));
+        stringList.forEach((String s) -> System.out.print(s));
 
         System.out.println("\nDritte Variante:");
-        stringList.forEach(System.out::println);
+        stringList.forEach(System.out::print);
+        System.out.println("\n\n");
     }
 }

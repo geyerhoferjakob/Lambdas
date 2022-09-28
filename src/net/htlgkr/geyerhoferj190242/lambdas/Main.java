@@ -34,6 +34,6 @@ public class Main {
             }
             return false;
         });
-        numberTester.testFile();
+            numberTester.testFile();
     }
 }

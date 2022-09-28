@@ -45,17 +45,18 @@ public class NumberTester {
             e.printStackTrace();
         }
 
-        System.out.println(list.get(0) + " Tests" + "\n");
+        System.out.println(list.get(0) + " Tests");
         for (int i = 1; i < list.size(); i++) {
+            System.out.println();
             switch(list.get(i)){
                 case "1":
                     System.out.println("OddEvenTester");
                     if(oddTester.testNumber(Integer.parseInt(list.get(i+1)))){
-                        System.out.println("ODD");
-                    }else{
                         System.out.println("EVEN");
+                    }else{
+                        System.out.println("ODD");
                     }
-
+                    i++;
                     break;
                 case "2":
                     System.out.println("PrimeTester");
@@ -69,12 +70,12 @@ public class NumberTester {
                 case "3":
                     System.out.println("PalindromeTester");
                     if(primeTester.testNumber(Integer.parseInt(list.get(i+1)))){
-                        System.out.println("Palindrome");
-                    }else{
                         System.out.println("NotPalindrome");
+                    }else{
+                        System.out.println("Palindrome");
                     }
-
-                    i++;
+                    i++;pwd
+                    break;
                 default:return;
             }
         }
