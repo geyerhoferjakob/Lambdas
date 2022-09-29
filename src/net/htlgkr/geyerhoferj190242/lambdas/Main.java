@@ -25,15 +25,13 @@ public class Main {
             if(valueN.length() < 1){
                 return true;
             }
-            for (int j = 0; j < valueN.length(); j++) {
-                if(valueN.charAt(j) == valueN.charAt(valueN.length()-j)) {
-                    continue;
-                }else{
-                    return false;
-                }
+            String valueNBack = "";
+            for (int j = valueN.length()-1; j >=0; j--) {
+                valueNBack = valueNBack + valueN.charAt(j);
             }
-            return false;
+            return valueN.equals(valueNBack);
         });
-            numberTester.testFile();
+        numberTester.testFile();
     }
+
 }

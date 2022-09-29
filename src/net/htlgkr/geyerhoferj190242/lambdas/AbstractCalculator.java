@@ -7,7 +7,10 @@ public abstract class AbstractCalculator {
     protected CalculationOperation divide;
 
     public AbstractCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divide) {
-        //TODO
+        this.add = add;
+        this.subtract = subtract;
+        this.multiply = multiply;
+        this.divide = divide;
     }
 
     public abstract Number add(Number a, Number b);

@@ -74,7 +74,7 @@ public class NumberTester {
                     }else{
                         System.out.println("Palindrome");
                     }
-                    i++;pwd
+                    i++;
                     break;
                 default:return;
             }
