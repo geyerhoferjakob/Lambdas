@@ -13,21 +13,16 @@ public class VektorCalculator extends AbstractCalculator {
 
     @Override
     public Number subtract(Number a, Number b) {
-        double number1 = a.getA() - b.getA();
-        double number2 = a.getB() - b.getB();
-        Number number = new Number();
-        number.setA(number1);
-        number.setB(number2);
-        return number;
+        return super.subtract.cale(a,b);
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        return null;
+        return super.multiply.cale(a,b);
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        return null;
+        return super.divide.cale(a,b);
     }
 }
